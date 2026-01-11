@@ -31,14 +31,17 @@ const Nav = ({ openNav }: NavProps) => {
     >
       <div className="flex items-center h-full justify-between w-[90%] mx-auto">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center flex-col">
-            <FaCode className="w-5 h-5 text-black" />
+        <Link href="#" className="inline-block">
+          <div className="flex items-center space-x-2 cursor-pointer">
+            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+              <FaCode className="w-5 h-5 text-black" />
+            </div>
+
+            <h1 className="text-xl hidden sm:block md:text-2xl text-white font-bold">
+              Bashir Muhammad
+            </h1>
           </div>
-          <h1 className="text-xl hidden sm:block md:text-2xl text-white font-bold ">
-            Bashir Muhammad
-          </h1>
-        </div>
+        </Link>
         {/* Navigations */}
         <div className="hidden lg:flex items-center space-x-10">
           {Navlinks.map((link) => {

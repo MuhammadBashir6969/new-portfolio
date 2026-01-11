@@ -9,30 +9,42 @@ type NavProps = {
 };
 
 const MobileNav = ({ closeNav, showNav }: NavProps) => {
-  const navOpen = showNav ? "translate-x-0" : "translate-x-[100%]";
   return (
     <div>
-      {/* overlay */}
+      {/* Overlay */}
       <div
-        className={`fixed inset-0 ${navOpen} transform transition-all right-0 duration-500 z-100002 bg-black opacity-70 w-full h-screen`}
-      ></div>
-      {/* overlay */}
+        onClick={closeNav}
+        className={`
+          fixed inset-0 bg-black transition-all duration-500 ease-in-out
+          ${showNav ? "opacity-70 visible" : "opacity-0 invisible"}
+          z-100002
+        `}
+      />
+
+      {/* Nav panel */}
       <div
-        className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-cyan-800 space-y-6 z-100050 right-0`}
+        className={`
+          fixed right-0 top-0 h-full w-[80%] sm:w-[60%]
+          bg-cyan-800 text-white flex flex-col justify-center space-y-6
+          transition-all duration-500 ease-in-out
+          ${
+            showNav ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+          }
+          z-100050
+        `}
       >
-        {Navlinks.map((link) => {
-          return (
-            <Link key={link.id} href={link.url}>
-              <p className="text-white w-fit text-xl ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px]">
-                {link.label}
-              </p>
-            </Link>
-          );
-        })}
-        {/* cross icon */}
+        {Navlinks.map((link) => (
+          <Link key={link.id} href={link.url} onClick={closeNav}>
+            <p className="w-fit ml-12 text-xl sm:text-[30px] border-b-[1.5px] border-white pb-1">
+              {link.label}
+            </p>
+          </Link>
+        ))}
+
+        {/* Close icon */}
         <CgClose
           onClick={closeNav}
-          className="absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-6 h-6 "
+          className="absolute top-[0.7rem] right-[1.4rem] w-6 h-6 sm:w-8 sm:h-8 cursor-pointer"
         />
       </div>
     </div>
