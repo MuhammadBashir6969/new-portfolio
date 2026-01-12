@@ -10,17 +10,25 @@ const Projects = () => {
       </h1>
       <div className="w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
         <div>
-          <img
-            src="/Images/image copy 5.png"
-            alt="img"
-            width={800}
-            height={650}
-            className="rounded-lg"
-          />
+          <a
+            href="https://bashir-e-commerce-dummy.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/Images/image copy 5.png"
+              alt="img"
+              width={800}
+              height={650}
+              className="rounded-lg"
+            />
+          </a>
           <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">
             <a
               href="https://bashir-e-commerce-dummy.netlify.app/"
               className="text-cyan-200 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Demo e-commerce website
             </a>
