@@ -35,6 +35,32 @@ const Projects = () => {
           </h1>
           <h1 className="pt-2 font-medium text-white/80">Apps, UI/UX</h1>
         </div>
+        <div>
+          <a
+            href="https://muhammadbashir-weather-app.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/Images/image copy 5.png"
+              alt="img"
+              width={800}
+              height={650}
+              className="rounded-lg"
+            />
+          </a>
+          <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">
+            <a
+              href="https://muhammadbashir-weather-app.netlify.app/"
+              className="text-cyan-200 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Simple Weather App
+            </a>
+          </h1>
+          <h1 className="pt-2 font-medium text-white/80">Apps, UI/UX</h1>
+        </div>
       </div>
     </div>
   );
